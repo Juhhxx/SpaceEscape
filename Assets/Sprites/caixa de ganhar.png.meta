@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      caixa de ganhar_0: -6206420013554236457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
