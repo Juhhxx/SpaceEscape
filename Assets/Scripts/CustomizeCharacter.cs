@@ -6,23 +6,32 @@ using Unity.VisualScripting;
 
 public class CustomizeCharacter : MonoBehaviour
 {
-    [Header("Hair UI Elements")]
-    public Image hairSelectionImage;    // UI image to preview/select hair
-    public Image hairDisplayImage;      // Character's hair display image
+    // [Header("Hair UI Elements")]
+    // public Image hairSelectionImage;    // UI image to preview/select hair
+    // public Image hairDisplayImage;      // Character's hair display image
 
-    [Header("Clothing UI Elements")]
-    public Image clothingSelectionImage; // UI image to preview/select clothing
-    public Image clothingDisplayImage;   // Character's clothing display image
+    // [Header("Clothing UI Elements")]
+    // public Image clothingSelectionImage; // UI image to preview/select clothing
+    // public Image clothingDisplayImage;   // Character's clothing display image
 
-    [Header("Hair Options")]
-    public Sprite[] hairOptions;        // Hair sprites (used for both selection and display)
+    // [Header("Hair Options")]
+    // public Sprite[] hairOptions;        // Hair sprites (used for both selection and display)
 
-    [Header("Clothing Options")]
-    public Sprite[] clothingOptions;    // Clothing selection preview sprites
-    public Sprite[] clothingNormal;     // Actual in-game clothing sprites (different visuals)
+    // [Header("Clothing Options")]
+    // public Sprite[] clothingOptions;    // Clothing selection preview sprites
+    // public Sprite[] clothingNormal;     // Actual in-game clothing sprites (different visuals)
 
-    private int currentHairIndex = 0;
-    private int currentClothingIndex = 0;
+    // private int currentHairIndex = 0;
+    // private int currentClothingIndex = 0;
+
+    [Header("Character UI Elements")]
+    public Image characterSelectionImage;
+    public Image characterDisplayImage;
+
+    [Header("Character Options")]
+    public Sprite[] characterOptions;
+
+    private int currentCharacterIndex;
 
     [SerializeField] private QuestionManager questionManager; // Reference to the QuestionManager for interaction
 
@@ -37,8 +46,7 @@ public class CustomizeCharacter : MonoBehaviour
 
     void Start()
     {
-        UpdateHair();
-        UpdateClothing();
+        UpdateCharacter();
     }
 
     private bool isStartingGame = false;
@@ -74,8 +82,7 @@ public class CustomizeCharacter : MonoBehaviour
 
         // Valid name input, start the game
         questionManager.StartGame(
-            hairOptions[currentHairIndex],
-            clothingNormal[currentClothingIndex],
+            characterOptions[currentCharacterIndex],
             nameInput.text
         );
 
@@ -83,43 +90,63 @@ public class CustomizeCharacter : MonoBehaviour
         DOVirtual.DelayedCall(3f, () => isStartingGame = false);
     }
 
-    public void NextHair()
+    // public void NextHair()
+    // {
+    //     currentHairIndex = (currentHairIndex + 1) % hairOptions.Length;
+    //     UpdateHair();
+    // }
+
+    // public void PreviousHair()
+    // {
+    //     currentHairIndex = (currentHairIndex - 1 + hairOptions.Length) % hairOptions.Length;
+    //     UpdateHair();
+    // }
+
+    // public void NextClothing()
+    // {
+    //     currentClothingIndex = (currentClothingIndex + 1) % clothingOptions.Length;
+    //     UpdateClothing();
+    // }
+
+    // public void PreviousClothing()
+    // {
+    //     currentClothingIndex = (currentClothingIndex - 1 + clothingOptions.Length) % clothingOptions.Length;
+    //     UpdateClothing();
+    // }
+
+    public void NextCharacter()
     {
-        currentHairIndex = (currentHairIndex + 1) % hairOptions.Length;
-        UpdateHair();
+        currentCharacterIndex = (currentCharacterIndex + 1) % characterOptions.Length;
+        UpdateCharacter();
     }
 
-    public void PreviousHair()
+    public void PreviousCharacter()
     {
-        currentHairIndex = (currentHairIndex - 1 + hairOptions.Length) % hairOptions.Length;
-        UpdateHair();
+        currentCharacterIndex = (currentCharacterIndex - 1 + characterOptions.Length) % characterOptions.Length;
+        UpdateCharacter();
     }
 
-    public void NextClothing()
+    private void UpdateCharacter()
     {
-        currentClothingIndex = (currentClothingIndex + 1) % clothingOptions.Length;
-        UpdateClothing();
+        Sprite selectedCharacter = characterOptions[currentCharacterIndex];
+
+        characterSelectionImage.sprite = selectedCharacter;
+        characterDisplayImage.sprite = selectedCharacter;
     }
 
-    public void PreviousClothing()
-    {
-        currentClothingIndex = (currentClothingIndex - 1 + clothingOptions.Length) % clothingOptions.Length;
-        UpdateClothing();
-    }
+    // private void UpdateHair()
+    // {
+    //     Sprite selectedHair = hairOptions[currentHairIndex];
+    //     hairSelectionImage.sprite = selectedHair;
+    //     hairDisplayImage.sprite = selectedHair;
+    // }
 
-    private void UpdateHair()
-    {
-        Sprite selectedHair = hairOptions[currentHairIndex];
-        hairSelectionImage.sprite = selectedHair;
-        hairDisplayImage.sprite = selectedHair;
-    }
+    // private void UpdateClothing()
+    // {
+    //     Sprite selectedPreview = clothingOptions[currentClothingIndex];
+    //     Sprite selectedNormal = clothingNormal[currentClothingIndex];
 
-    private void UpdateClothing()
-    {
-        Sprite selectedPreview = clothingOptions[currentClothingIndex];
-        Sprite selectedNormal = clothingNormal[currentClothingIndex];
-
-        clothingSelectionImage.sprite = selectedPreview;
-        clothingDisplayImage.sprite = selectedNormal;
-    }
+    //     clothingSelectionImage.sprite = selectedPreview;
+    //     clothingDisplayImage.sprite = selectedNormal;
+    // }
 }

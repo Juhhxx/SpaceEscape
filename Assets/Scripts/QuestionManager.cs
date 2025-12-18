@@ -70,10 +70,10 @@ public class QuestionManager : MonoBehaviour
         timeDeducedText.gameObject.SetActive(false);
     }
 
-    public void StartGame(Sprite hair, Sprite clothing, string name)
+    public void StartGame(Sprite character, string name)
     {
-        playerPhoto.sprite = clothing; // Set player photo to clothing sprite
-        playerHair.sprite = hair; // Set player hair to hair sprite
+        playerPhoto.sprite = character; // Set player photo to clothing sprite
+        // playerHair.sprite = hair; // Set player hair to hair sprite
         playerNameText.text = name; // Set player name text
         isTimerRunning = true; // Start the timer when the game starts
         timeRemaining = 3600f; // Reset timer to 1 hour (3600 seconds)
@@ -113,7 +113,7 @@ public class QuestionManager : MonoBehaviour
         multipleChoiceUI.SetActive(!currentQuestion.isInputBased);
         if(currentQuestion.hintField.Length > 0)
         {
-            hintText.text = "Instrução: " + currentQuestion.hintField;
+            hintText.text = "Instruï¿½ï¿½o: " + currentQuestion.hintField;
         }
         else
         {
