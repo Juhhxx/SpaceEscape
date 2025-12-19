@@ -11,6 +11,9 @@ public class QuestionManager : MonoBehaviour
     public GameObject multipleChoiceUI;
     public MultipleChoiceUI multipleChoiceHandler;
 
+    [SerializeField] private Image _progressIndicadorFillImage;
+    [SerializeField] private TextMeshProUGUI _progressIndicatorTMP;
+
     [Header("Question Data")]
     public QuestionSO[] questionsPt;
     public QuestionSO[] questionsEn;
@@ -77,18 +80,6 @@ public class QuestionManager : MonoBehaviour
         timeDeducedText.gameObject.SetActive(false);
     }
 
-    // private void OnEnable()
-    // {
-    //     LocalizationManager.Instance.OnLanguageChanged += UpdateLocalizedComponent;
-    // }
-
-    // private void OnDisable()
-    // {
-    //     LocalizationManager.Instance.OnLanguageChanged -= UpdateLocalizedComponent;
-    // }
-
-    // private void Localize
-
     public void StartGame(Sprite character, string name)
     {
         playerPhoto.sprite = character; // Set player photo to clothing sprite
@@ -124,7 +115,9 @@ public class QuestionManager : MonoBehaviour
 
     private void LoadQuestion(int index)
     {
+        _progressIndicatorTMP.text = $"{index + 1}/{questions.Length}";
 
+        _progressIndicadorFillImage.DOFillAmount(index / (float)questions.Length, 0.5f).SetEase(Ease.OutSine);
 
         currentQuestion = questions[index];
 
