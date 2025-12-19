@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening; // Import DOTween namespace
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class QuestionManager : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class QuestionManager : MonoBehaviour
     public MultipleChoiceUI multipleChoiceHandler;
 
     [Header("Question Data")]
-    public QuestionSO[] questions;
+    public QuestionSO[] questionsPt;
+    public QuestionSO[] questionsEn;
+
+    private QuestionSO[] questions => LocalizationManager.Instance.Language.Code == "PT" ? 
+                                        questionsPt : questionsEn;
 
     private int currentIndex = 0;
     private QuestionSO currentQuestion;
@@ -47,10 +52,12 @@ public class QuestionManager : MonoBehaviour
 
     [SerializeField] private MainMenuTransition mainMenuTransition; // Reference to the MainMenuTransition script
 
+    [SerializeField] private List<LocalizedText> _instructionsLocalizations;
+    [SerializeField] private List<LocalizedText> _questionsLocalizations;
+    [SerializeField] private List<LocalizedText> _timeLocalizations;
+
     void Start()
     {
-        
-
         // Store the original position of the time deducted text at the start
         deduceTextOriginalPosition = timeDeducedText.transform.localPosition;
 
@@ -69,6 +76,18 @@ public class QuestionManager : MonoBehaviour
         // Initially hide the time deducted text
         timeDeducedText.gameObject.SetActive(false);
     }
+
+    // private void OnEnable()
+    // {
+    //     LocalizationManager.Instance.OnLanguageChanged += UpdateLocalizedComponent;
+    // }
+
+    // private void OnDisable()
+    // {
+    //     LocalizationManager.Instance.OnLanguageChanged -= UpdateLocalizedComponent;
+    // }
+
+    // private void Localize
 
     public void StartGame(Sprite character, string name)
     {
@@ -113,7 +132,8 @@ public class QuestionManager : MonoBehaviour
         multipleChoiceUI.SetActive(!currentQuestion.isInputBased);
         if(currentQuestion.hintField.Length > 0)
         {
-            hintText.text = "Instru��o: " + currentQuestion.hintField;
+            hintText.text = LocalizedAssets.GetLocalization<LocalizedText>(_instructionsLocalizations, gameObject).Text +
+                            " " + currentQuestion.hintField;
         }
         else
         {
@@ -128,7 +148,8 @@ public class QuestionManager : MonoBehaviour
                 // Load the new question
                 if (questionText != null)
                 {
-                    questionText.text = "PERGUNTA " + (currentIndex + 1);
+                    questionText.text = LocalizedAssets.GetLocalization<LocalizedText>(_questionsLocalizations, gameObject).Text + 
+                                        " " + (currentIndex + 1);
                 }
                 // Set input field color back to white after pop-in
                 inputField.image.color = Color.white;
@@ -152,7 +173,8 @@ public class QuestionManager : MonoBehaviour
             {
                 if (questionText != null)
                 {
-                    questionText.text = "PERGUNTA " + (currentIndex + 1);
+                    questionText.text = LocalizedAssets.GetLocalization<LocalizedText>(_questionsLocalizations, gameObject).Text + 
+                                        " " + (currentIndex + 1);
                 }
 
                 // Set up options for multiple choice question
@@ -255,7 +277,8 @@ public class QuestionManager : MonoBehaviour
         }
         else
         {
-            winFinalTime.text = "Tempo Restante:\n" + timerText.text; // Set the final time in the win screen
+            winFinalTime.text = LocalizedAssets.GetLocalization<LocalizedText>(_timeLocalizations, gameObject).Text + 
+                                "\n" + timerText.text; // Set the final time in the win screen
             mainMenuTransition.TransitionToWin();
             Debug.Log("Quiz complete!");
         }

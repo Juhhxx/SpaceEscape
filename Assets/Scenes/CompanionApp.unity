@@ -1050,6 +1050,7 @@ GameObject:
   - component: {fileID: 128660461}
   - component: {fileID: 128660463}
   - component: {fileID: 128660462}
+  - component: {fileID: 128660464}
   m_Layer: 5
   m_Name: Choose Character Text
   m_TagString: Untagged
@@ -1175,6 +1176,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128660460}
   m_CullTransparentMesh: 1
+--- !u!114 &128660464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128660460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "ESCOLHE A TUA CAPIT\xC3"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: CHOOSE YOUR CAPTAIN
+  _localizationsSprites: []
 --- !u!1 &140310145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1206,7 @@ GameObject:
   - component: {fileID: 140310146}
   - component: {fileID: 140310148}
   - component: {fileID: 140310147}
+  - component: {fileID: 140310149}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1311,6 +1332,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140310145}
   m_CullTransparentMesh: 1
+--- !u!114 &140310149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140310145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "CAPIT\xC3"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: CAPTAIN
+  _localizationsSprites: []
 --- !u!1 &147586709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &158046743
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1420,12 +1460,13 @@ RectTransform:
   - {fileID: 1020899628}
   - {fileID: 1817134046}
   - {fileID: 1874376584}
+  - {fileID: 1337732179}
   m_Father: {fileID: 2037777006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &180024075
 GameObject:
@@ -1558,6 +1599,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180024075}
+  m_CullTransparentMesh: 1
+--- !u!1 &184048469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184048470}
+  - component: {fileID: 184048472}
+  - component: {fileID: 184048471}
+  m_Layer: 5
+  m_Name: Current Language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &184048470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184048469}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 692308983}
+  m_Father: {fileID: 1337732179}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &184048471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184048469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6471943949251092626, guid: 56cc9e5f8db266e45abc9e7342126fe3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &184048472
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184048469}
   m_CullTransparentMesh: 1
 --- !u!1 &184799328
 GameObject:
@@ -2197,7 +2314,17 @@ MonoBehaviour:
   inputKeyboardUI: {fileID: 372842609}
   multipleChoiceUI: {fileID: 1591799969}
   multipleChoiceHandler: {fileID: 1591799971}
-  questions:
+  questionsPt:
+  - {fileID: 11400000, guid: 609a4caa2f87e8d4487f1405c92c7f3e, type: 2}
+  - {fileID: 11400000, guid: 7b5bcd93e0539f34985c207f3866957b, type: 2}
+  - {fileID: 11400000, guid: 62990f3efdeb743449c93d2c9781cbca, type: 2}
+  - {fileID: 11400000, guid: e25178a9c0808a24ab1fa0fc431ade9f, type: 2}
+  - {fileID: 11400000, guid: 894805b078c2f9345b1daa5fab7d0952, type: 2}
+  - {fileID: 11400000, guid: 6280deb5eb9a1b2448a46cf3c421f925, type: 2}
+  - {fileID: 11400000, guid: a9c41c1dd8c5e99459fdd6dfdb57edf8, type: 2}
+  - {fileID: 11400000, guid: b5e73600b85db4b41a2422a458a68a17, type: 2}
+  - {fileID: 11400000, guid: 517ad1beef266b84bb4a817d7e915809, type: 2}
+  questionsEn:
   - {fileID: 11400000, guid: 609a4caa2f87e8d4487f1405c92c7f3e, type: 2}
   - {fileID: 11400000, guid: 7b5bcd93e0539f34985c207f3866957b, type: 2}
   - {fileID: 11400000, guid: 62990f3efdeb743449c93d2c9781cbca, type: 2}
@@ -2226,6 +2353,21 @@ MonoBehaviour:
   loseText: {fileID: 0}
   winFinalTime: {fileID: 470769992}
   mainMenuTransition: {fileID: 367536144}
+  _instructionsLocalizations:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Instru\xE7\xE3o:"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Instruction:'
+  _questionsLocalizations:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: PERGUNTA
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: QUESTION
+  _timeLocalizations:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: 'Tempo Restante:'
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Time Left:'
 --- !u!114 &367536144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,6 +2776,7 @@ GameObject:
   - component: {fileID: 444903180}
   - component: {fileID: 444903182}
   - component: {fileID: 444903181}
+  - component: {fileID: 444903183}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2759,6 +2902,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444903179}
   m_CullTransparentMesh: 1
+--- !u!114 &444903183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444903179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Confirmar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Confirm
+  _localizationsSprites: []
 --- !u!1 &452252663
 GameObject:
   m_ObjectHideFlags: 0
@@ -8491,6 +8653,7 @@ GameObject:
   - component: {fileID: 591627800}
   - component: {fileID: 591627802}
   - component: {fileID: 591627801}
+  - component: {fileID: 591627803}
   m_Layer: 5
   m_Name: Sem Tempo!
   m_TagString: Untagged
@@ -8616,6 +8779,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591627799}
   m_CullTransparentMesh: 1
+--- !u!114 &591627803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591627799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Sem Tempo!
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Timeout!
+  _localizationsSprites: []
 --- !u!1 &617096822
 GameObject:
   m_ObjectHideFlags: 0
@@ -8983,6 +9165,7 @@ GameObject:
   - component: {fileID: 668320881}
   - component: {fileID: 668320883}
   - component: {fileID: 668320882}
+  - component: {fileID: 668320884}
   m_Layer: 5
   m_Name: "Miss\xE3o N\xE3o Completada!"
   m_TagString: Untagged
@@ -9107,6 +9290,115 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668320880}
+  m_CullTransparentMesh: 1
+--- !u!114 &668320884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668320880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Miss\xE3o N\xE3o Completada!"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Mission Not Completed!
+  _localizationsSprites: []
+--- !u!1 &692308982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692308983}
+  - component: {fileID: 692308986}
+  - component: {fileID: 692308985}
+  - component: {fileID: 692308984}
+  m_Layer: 5
+  m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &692308983
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692308982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1861129700}
+  m_Father: {fileID: 184048470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &692308984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692308982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
+  m_ShowMaskGraphic: 1
+--- !u!114 &692308985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692308982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 830194d7e06a2a24ab919805205203a9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &692308986
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692308982}
   m_CullTransparentMesh: 1
 --- !u!1 &696172136
 GameObject:
@@ -9977,6 +10269,7 @@ GameObject:
   - component: {fileID: 868750372}
   - component: {fileID: 868750374}
   - component: {fileID: 868750373}
+  - component: {fileID: 868750375}
   m_Layer: 5
   m_Name: Name Insert
   m_TagString: Untagged
@@ -10102,6 +10395,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868750371}
   m_CullTransparentMesh: 1
+--- !u!114 &868750375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868750371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: INSERE O TEU NOME
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: INSERT YOUR NAME
+  _localizationsSprites: []
 --- !u!1 &869890744
 GameObject:
   m_ObjectHideFlags: 0
@@ -10250,6 +10562,7 @@ GameObject:
   - component: {fileID: 875875484}
   - component: {fileID: 875875483}
   - component: {fileID: 875875482}
+  - component: {fileID: 875875485}
   m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
@@ -10395,6 +10708,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875875480}
   m_CullTransparentMesh: 1
+--- !u!114 &875875485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875875480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Nome...
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Name...
+  _localizationsSprites: []
 --- !u!1 &885812089
 GameObject:
   m_ObjectHideFlags: 0
@@ -10411,7 +10743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &885812090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10477,6 +10809,7 @@ GameObject:
   - component: {fileID: 899851121}
   - component: {fileID: 899851123}
   - component: {fileID: 899851122}
+  - component: {fileID: 899851124}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -10602,6 +10935,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899851120}
   m_CullTransparentMesh: 1
+--- !u!114 &899851124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899851120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Jogar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Play
+  _localizationsSprites: []
 --- !u!1 &905043979
 GameObject:
   m_ObjectHideFlags: 0
@@ -10989,6 +11341,7 @@ GameObject:
   - component: {fileID: 936779480}
   - component: {fileID: 936779482}
   - component: {fileID: 936779481}
+  - component: {fileID: 936779483}
   m_Layer: 5
   m_Name: "Miss\xE3o completa!"
   m_TagString: Untagged
@@ -11114,6 +11467,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936779479}
   m_CullTransparentMesh: 1
+--- !u!114 &936779483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936779479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Miss\xE3o Completada!"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Mission Complete!
+  _localizationsSprites: []
 --- !u!1 &952110740
 GameObject:
   m_ObjectHideFlags: 0
@@ -16154,6 +16526,7 @@ GameObject:
   - component: {fileID: 1014883823}
   - component: {fileID: 1014883825}
   - component: {fileID: 1014883824}
+  - component: {fileID: 1014883826}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -16279,6 +16652,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014883822}
   m_CullTransparentMesh: 1
+--- !u!114 &1014883826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014883822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Capit\xE3"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Captain
+  _localizationsSprites: []
 --- !u!1 &1020899627
 GameObject:
   m_ObjectHideFlags: 0
@@ -16473,6 +16865,7 @@ GameObject:
   - component: {fileID: 1092935085}
   - component: {fileID: 1092935087}
   - component: {fileID: 1092935086}
+  - component: {fileID: 1092935088}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -16598,6 +16991,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092935084}
   m_CullTransparentMesh: 1
+--- !u!114 &1092935088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092935084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Confirmar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Confirm
+  _localizationsSprites: []
 --- !u!1 &1111210750
 GameObject:
   m_ObjectHideFlags: 0
@@ -26869,6 +27281,7 @@ GameObject:
   - component: {fileID: 1321178310}
   - component: {fileID: 1321178312}
   - component: {fileID: 1321178311}
+  - component: {fileID: 1321178313}
   m_Layer: 5
   m_Name: "\xD3timo trabalho, tripula\xE7\xE3o!  A nave foi consertada e retomamos
     o rumo para a Terra!  ..."
@@ -26996,6 +27409,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321178309}
   m_CullTransparentMesh: 1
+--- !u!114 &1321178313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321178309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "A miss\xE3o falhou! \nN\xE3o conseguimos consertar a
+      nave e fic\xE1mos \xE0 deriva.\n..."
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Mission failed!
+
+      We couldn''t fix the ship and
+      are now drifting through space.
+
+      ...'
+  _localizationsSprites: []
+--- !u!1 &1337732178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337732179}
+  m_Layer: 5
+  m_Name: Localization Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1337732179
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337732178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 184048470}
+  m_Father: {fileID: 158046743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1346587354
 GameObject:
   m_ObjectHideFlags: 0
@@ -27043,6 +27517,7 @@ GameObject:
   - component: {fileID: 1377038524}
   - component: {fileID: 1377038526}
   - component: {fileID: 1377038525}
+  - component: {fileID: 1377038527}
   m_Layer: 5
   m_Name: TIMER (1)
   m_TagString: Untagged
@@ -27168,6 +27643,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377038523}
   m_CullTransparentMesh: 1
+--- !u!114 &1377038527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377038523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: 'Tempo restante:'
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Time left:'
+  _localizationsSprites: []
 --- !u!1 &1385074893
 GameObject:
   m_ObjectHideFlags: 0
@@ -27628,6 +28122,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413465545}
   m_CullTransparentMesh: 1
+--- !u!1 &1431491518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431491520}
+  - component: {fileID: 1431491519}
+  m_Layer: 0
+  m_Name: LocalizationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1431491519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431491518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d082a39d3026f4ebaed6e9a58743eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationManager
+  _language: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+--- !u!4 &1431491520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431491518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 228.29382, y: 99.39414, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1442989771
 GameObject:
   m_ObjectHideFlags: 0
@@ -28271,6 +28810,7 @@ GameObject:
   - component: {fileID: 1547030598}
   - component: {fileID: 1547030597}
   - component: {fileID: 1547030596}
+  - component: {fileID: 1547030599}
   m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
@@ -28416,6 +28956,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547030594}
   m_CullTransparentMesh: 1
+--- !u!114 &1547030599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547030594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Resposta...
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Answer...
+  _localizationsSprites: []
 --- !u!1 &1547065578
 GameObject:
   m_ObjectHideFlags: 0
@@ -29117,6 +29676,7 @@ GameObject:
   - component: {fileID: 1761293699}
   - component: {fileID: 1761293701}
   - component: {fileID: 1761293700}
+  - component: {fileID: 1761293702}
   m_Layer: 5
   m_Name: "\xD3timo trabalho, tripula\xE7\xE3o!  A nave foi consertada e retomamos
     o rumo para a Terra!  ..."
@@ -29165,7 +29725,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\xD3timo trabalho, tripula\xE7\xE3o! \nA nave foi consertada e retomamos
-    o rumo para a Terra! \n..."
+    o rumo para a Terra! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d272d0257c407a249af68a160e85a9da, type: 2}
   m_sharedMaterial: {fileID: -2482020491189418928, guid: d272d0257c407a249af68a160e85a9da, type: 2}
@@ -29244,6 +29804,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761293698}
   m_CullTransparentMesh: 1
+--- !u!114 &1761293702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761293698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "\xD3timo trabalho, tripula\xE7\xE3o! \nA nave foi consertada
+      e retomamos o rumo para a Terra!\n..."
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Great job, crew!
+
+      The ship has been fixed and we
+      are en route to Earth!
+
+      ...'
+  _localizationsSprites: []
 --- !u!1 &1766856661
 GameObject:
   m_ObjectHideFlags: 0
@@ -29387,6 +29972,7 @@ GameObject:
   - component: {fileID: 1783199938}
   - component: {fileID: 1783199940}
   - component: {fileID: 1783199939}
+  - component: {fileID: 1783199941}
   m_Layer: 5
   m_Name: Sucesso!
   m_TagString: Untagged
@@ -29512,6 +30098,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783199937}
   m_CullTransparentMesh: 1
+--- !u!114 &1783199941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783199937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Sucesso!
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Sucess!
+  _localizationsSprites: []
 --- !u!1 &1796675711
 GameObject:
   m_ObjectHideFlags: 0
@@ -30167,6 +30772,7 @@ GameObject:
   - component: {fileID: 1856925608}
   - component: {fileID: 1856925610}
   - component: {fileID: 1856925609}
+  - component: {fileID: 1856925611}
   m_Layer: 5
   m_Name: Name Insert
   m_TagString: Untagged
@@ -30292,6 +30898,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856925607}
   m_CullTransparentMesh: 1
+--- !u!114 &1856925611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856925607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Nenhum nome escolhido...
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: No name chosen...
+  _localizationsSprites: []
 --- !u!1 &1859527838
 GameObject:
   m_ObjectHideFlags: 0
@@ -30331,6 +30956,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1861129699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861129700}
+  - component: {fileID: 1861129702}
+  - component: {fileID: 1861129701}
+  m_Layer: 5
+  m_Name: Flag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1861129700
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861129699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 692308983}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 120, y: 76.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1861129701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861129699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ff9c0546fe6dd4f4083e5966136cdad6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1861129702
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861129699}
+  m_CullTransparentMesh: 1
 --- !u!1 &1874376583
 GameObject:
   m_ObjectHideFlags: 0
@@ -36245,3 +36945,4 @@ SceneRoots:
   - {fileID: 2037777006}
   - {fileID: 905043981}
   - {fileID: 367536142}
+  - {fileID: 1431491520}
