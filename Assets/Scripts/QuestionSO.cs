@@ -9,5 +9,5 @@ public class QuestionSO : ScriptableObject
 
     public string hintField;
 
-    public string missionDescription;
+    [TextArea] public string missionDescription;
 }

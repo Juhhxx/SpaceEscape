@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2bab230e400ab469575cdd02f0a386, type: 3}
+  m_Name: Question2
+  m_EditorClassIdentifier: 
+  options: []
+  isInputBased: 1
+  correctAnswer: 300
+  hintField: Angle in degrees (300)
+  missionDescription: 'Align the X value of the mechanical arms wit the visible X
+    value on the spaceship .
+
+    Start with the left arm at 20 degrees and the right
+    arm at 300 degrees.'
