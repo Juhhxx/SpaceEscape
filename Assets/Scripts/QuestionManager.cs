@@ -78,6 +78,8 @@ public class QuestionManager : MonoBehaviour
 
         // Initially hide the time deducted text
         timeDeducedText.gameObject.SetActive(false);
+
+        UpdateProgressIndicator(currentIndex);
     }
 
     public void StartGame(Sprite character, string name)
@@ -113,11 +115,22 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    private void LoadQuestion(int index)
+    private void UpdateProgressIndicator(int index)
     {
         _progressIndicatorTMP.text = $"{index + 1}/{questions.Length}";
 
         _progressIndicadorFillImage.DOFillAmount(index / (float)questions.Length, 0.5f).SetEase(Ease.OutSine);
+
+        if (index == 0) return;
+
+        _progressIndicatorTMP.transform.DOScale(Vector3.one * 1.2f, 0.2f).OnComplete(() =>
+        {
+            _progressIndicatorTMP.transform.DOScale(Vector3.one, 0.2f);
+        });
+    }
+
+    private void LoadQuestion(int index)
+    {
 
         currentQuestion = questions[index];
 
@@ -264,6 +277,8 @@ public class QuestionManager : MonoBehaviour
     private void NextQuestion()
     {
         currentIndex++;
+        UpdateProgressIndicator(currentIndex);
+
         if (currentIndex < questions.Length)
         {
             LoadQuestion(currentIndex);
